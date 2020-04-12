@@ -19,6 +19,6 @@ class OauthController < ApplicationController
     access_token = consumer.get_access_token(request_token, :oauth_verifier => '1')
     session[:access_token] = access_token.token
     session[:access_secret] = access_token.secret
-    render nothing: true
+    redirect_to user_path, notice: 'Yaaaay'
   end
 end
