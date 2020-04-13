@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="header-container">
+  <h1 class="header-text logo">DeweyDash</h1>
+  <h5 class="header-text welcome-message">
+      Welcome, <%= @user_name %>!
+  </h5>
+</div>
+<nav>
+  <%= render 'shared/nav' %>
+  
+</nav>
 <%= yield %>
 
 </body>

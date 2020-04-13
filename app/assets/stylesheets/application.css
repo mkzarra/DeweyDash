@@ -18,7 +18,60 @@ body {
   padding: 30px;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-text {
+  color: rgb(0, 94, 255);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between
+}
+
 .welcome-message {
   text-align: right;
+  color: #444;
+}
+
+.logo {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: right;
+}
+
+li a {
+  text-decoration: none;
   color: rgb(0, 94, 255);
+  font-family: "Lato", sans-serif;
+  padding: 8px;
+  box-sizing: content-box;
+  transition: 0.15s;
+  display: inline-block;
+}
+
+li a:after, li a:before {
+  display: block;
+  content: '';
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transition: transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  border-bottom: 2px solid rgb(0, 94, 255);
+}
+
+li a:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
