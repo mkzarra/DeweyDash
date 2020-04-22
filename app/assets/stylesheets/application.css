@@ -15,7 +15,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
 }
 
 nav {
@@ -23,20 +22,30 @@ nav {
   flex-direction: row;
 }
 
+header {
+  background: rgb(0, 94, 255);
+  box-shadow: 0.5px 0.5px 6px #999;
+  height: 20vh;
+  background-position: top;
+  margin: auto;
+  width: 100%;
+  padding: 18px 30px;
+}
+
 .header-text {
-  color: rgb(0, 94, 255);
+  color: white;
 }
 
 .header-container {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .welcome-message {
   text-align: right;
-  color: #444;
+  color: rgb(255, 249, 87);
 }
 
 .logo {
@@ -53,7 +62,7 @@ ul {
 
 li a {
   text-decoration: none;
-  color: rgb(0, 94, 255);
+  color: white;
   font-family: "Lato", sans-serif;
   padding: 8px;
   box-sizing: content-box;
@@ -68,7 +77,7 @@ li a:after, li a:before {
   -webkit-transform: scaleX(0);
   transition: transform 0.15s ease-in-out;
   -webkit-transition: transform 0.15s ease-in-out;
-  border-bottom: 2px solid rgb(0, 94, 255);
+  border-bottom: 2px solid white;
 }
 
 li a:hover:after {
