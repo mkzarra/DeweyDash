@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :application
+  get 'oauth/auth_link' => 'oauth#auth_link'
+  get 'oauth/callback' => 'oauth#callback'
+
+  get '/user' => 'user#show'
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'application#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  # GoodReads API keys
+  config.goodreads_api_key = "DSkvp2nbZf3MEPq9wc9Lg"
+  config.goodreads_api_secret = "itXf8KRFRTqV4oVUGB9smFcqWuMh4fyWgNoWs9Dqvi4"
 end

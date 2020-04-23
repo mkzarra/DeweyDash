@@ -1,15 +1,86 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("/app/assets/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  background: rgb(0, 94, 255);
+  box-shadow: 0.5px 0.5px 6px #999;
+  height: 20vh;
+  background-position: top;
+  margin: auto;
+  width: 100%;
+  padding: 18px 30px;
+}
+
+.header-text {
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.welcome-message {
+  text-align: right;
+  color: white;
+}
+
+.logo {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-self: right;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  padding: 8px;
+  box-sizing: content-box;
+  transition: 0.15s;
+  display: inline-block;
+}
+
+li a:after, li a:before {
+  display: block;
+  content: '';
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transition: transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  border-bottom: 2px solid white;
+}
+
+li a:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
