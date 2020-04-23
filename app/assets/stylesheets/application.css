@@ -25,7 +25,6 @@ nav {
 header {
   background: rgb(0, 94, 255);
   box-shadow: 0.5px 0.5px 6px #999;
-  height: 20vh;
   background-position: top;
   margin: auto;
   width: 100%;
@@ -40,6 +39,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 26px;
   justify-content: space-between;
 }
 
@@ -58,6 +58,20 @@ ul {
   flex-direction: row;
   justify-content: space-evenly;
   align-self: right;
+}
+
+.books-container {
+  margin: 1rem auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column
+}
+
+.books {
+  box-shadow: 0.5px 0.5px 6px #999;
+  width: 100%;
+  margin: 4px auto;
+  text-align: center;
 }
 
 li a {
