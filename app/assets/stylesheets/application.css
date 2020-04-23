@@ -68,8 +68,8 @@ ul {
 }
 
 .books {
-  box-shadow: 0.5px 0.5px 6px #999;
-  width: 100%;
+  box-shadow: 0.5px 0.5px 3px #999;
+  width: 80%;
   margin: 4px auto;
   text-align: center;
 }
