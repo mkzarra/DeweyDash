@@ -1,5 +1,5 @@
-<div class="books-container">
+<ul class="books-container">
   <% @books.each do |book| %>
-    <div class="books"><strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %></div>
+    <li class="books"><strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %></li>
   <% end %>
-</div>
+</ul>
