@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'oauth/callback' => 'oauth#callback'
 
   get '/user' => 'user#show'
-  get '/books' => 'books#index'
+  resources :books, only: [:index, :show]
+  
   # You can have the root of your site routed with "root"
   root 'application#index'
 

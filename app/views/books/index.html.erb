@@ -1,5 +1,8 @@
 <ul class="books-container">
   <% @books.each do |book| %>
-    <li class="books"><strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %></li>
+    <li class="books" id=<%= book['id'].to_s + "_" + book['title'].split(" ").join("_") %>>
+      <%= link_to book['title'], book_path(book['id']) %>
+      <strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %>
+    </li>
   <% end %>
 </ul>
