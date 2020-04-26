@@ -1,4 +1,14 @@
-<div class="book-card">
-  <h1><%= @book['title'] %></h1>
-  <p><%= @book['description']%></p>
+<div class="book-card front">
+  <div class='card-header'>
+  <span><strong><h1><%= @book['work']['original_title'] %></h1></strong>
+  <h3>by <%= @book['authors']['author']['name'] %></h3></span>
+  <img alt=<%= @book['work']['original_title'] %> src=<%= @book['image_url']%>>
+  </div>
+  <p><%= strip_tags(@book['description'])%></p>
+  <div class="back">
+    <span class="publisher"><%= @book['publisher'] %></span>
+    <span><%= @book['publication_year'] %></span>
+    <span class="language"> <%= @book['language_code'].capitalize %></span>
+  </div>
 </div>
+

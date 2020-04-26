@@ -48,6 +48,18 @@ header {
   color: white;
 }
 
+.back {
+  border-top: 1px solid #eee;
+  font: small-caption;
+  margin: 3% 0 0;
+  padding: 3% 0;
+}
+
+
+.back span {
+margin: 8%;
+}
+
 .logo {
   text-align: left;
 }
@@ -75,12 +87,28 @@ ul {
   cursor: pointer;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+}
+
+.card-header span {
+  margin: auto;
+}
+
+.card-header img {
+  align-self: flex-end;
+}
+
 .books:hover {
   box-shadow: 1px 0.5px 3px #999;
   padding: 2px;
 }
 
-.book-card {
+.book-card, .front {
   box-shadow: 1px 2px 36px #ccc;
   border: 1px solid #eee;
   width: 60%;
@@ -112,4 +140,8 @@ li a:after, li a:before {
 li a:hover:after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.show-book-link {
+  width: 100%;
 }
