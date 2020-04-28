@@ -82,9 +82,24 @@ ul {
 .books {
   box-shadow: 0.5px 0.5px 3px #999;
   width: 80%;
+  height: 2em;
+  padding-bottom: 6px;
   margin: 4px auto;
   text-align: center;
   cursor: pointer;
+  box-sizing: content-box;
+}
+
+.books a {
+  width: 100%;
+  color: #777;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+.books a::before, .books a::after {
+  border: none;
 }
 
 .card-header {
@@ -105,7 +120,12 @@ ul {
 
 .books:hover {
   box-shadow: 1px 0.5px 3px #999;
-  padding: 2px;
+  background-color: #fafafa;
+  border: none;
+}
+
+.books a:hover, .books a:hover:before, .books a:hover:after {
+  border: none;
 }
 
 .book-card, .front {
