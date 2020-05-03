@@ -1,6 +1,11 @@
 <div class="sub-header">
-<h1 ><strong><%= @shelf['name'].capitalize%></strong></h1>
-<ul class="books-container">
-  
-</ul>
+  <h1 ><strong><%= @shelf['name'].split('-').map { |s| s.capitalize }.join(' ') %></strong></h1>
+  <ul class="books-container">
+    <% @reading_list.each do |book| %>
+      <li class="books" id=<%= book['id'].to_s + "_" + book['title'].split(" ").join("_") %>>
+        <%= link_to book_path(book['id']) do %>
+          <span class='book-title book-author'><strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %></span>
+        <% end %>
+      </li>
+  </ul>
 </div>
