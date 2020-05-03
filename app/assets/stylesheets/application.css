@@ -118,6 +118,13 @@ ul {
   align-self: flex-end;
 }
 
+.sub-header {
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+
 .books:hover {
   box-shadow: 1px 0.5px 3px #999;
   background-color: #fafafa;

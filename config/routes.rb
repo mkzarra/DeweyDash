@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/user' => 'user#show'
   resources :books, only: [:index, :show]
+  resources :shelves, only: [:index, :show]
   
   # You can have the root of your site routed with "root"
   root 'application#index'

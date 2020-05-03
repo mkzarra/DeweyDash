@@ -1,0 +1,9 @@
+<ul class="books-container">
+  <% @shelves.each do |shelf| %>
+    <li class="books" id=<%= shelf['id'].to_s + "_" + shelf['name'].split(" ").join("_") %>>
+      <%= link_to shelf_path(shelf['id']) do %>
+        <span class='book-title book-author'><strong><%= shelf["name"].split("-").map {|str| str.capitalize}.join(' ') %></strong></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
