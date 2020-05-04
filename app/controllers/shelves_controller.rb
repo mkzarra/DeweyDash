@@ -6,9 +6,9 @@ class ShelvesController < ApplicationController
   end
 
   def show
-    response = goodreads_oauth_access_token.get("https://www.goodreads.com/shelf/list/#{params[:id]}.xml?v=2")
+    @shelf_name = params[:name]
+    response = goodreads_oauth_access_token.get("https://www.goodreads.com/review/list.xml?shelf=#{@shelf_name}&per_page=200")
     response_hash = Hash.from_xml(response.body)
-    @shelf = response_hash["GoodreadsResponse"]['shelves']['user_shelf'].find { |shelf| shelf['id'].to_s == params[:id] }
-    # @reading_list = @books.filter { |book| book['my-review']['shelves']['shelf']['name'] == @shelf['name'] }
+    @reading_list = response_hash["GoodreadsResponse"]["books"]["book"]
   end
 end

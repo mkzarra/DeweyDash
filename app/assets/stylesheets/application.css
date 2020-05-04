@@ -24,9 +24,10 @@ nav {
 
 header {
   background: rgb(0, 94, 255);
-  box-shadow: 0.5px 0.5px 6px #999;
+  box-shadow: 1px 1px 2px #999;
   background-position: top;
   margin: auto;
+  margin-bottom: 2px;
   width: 100%;
   padding: 18px 30px;
 }
@@ -120,9 +121,12 @@ ul {
 
 .sub-header {
   border-bottom: 1px solid #eee;
+  background-color: #fafafa;
+  box-shadow: 1px 1px 1px #dfdfdf; 
   text-align: center;
   box-sizing: border-box;
   margin: auto;
+  padding: 14px;
 }
 
 .books:hover {
