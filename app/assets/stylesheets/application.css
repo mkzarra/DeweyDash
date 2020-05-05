@@ -84,7 +84,7 @@ ul {
 }
 
 .books {
-  box-shadow: 0.5px 0.5px 3px #999;
+  box-shadow: 0.5px 0.5px 2px #b9b9b988;
   width: 80%;
   height: 2em;
   padding-bottom: 6px;
@@ -123,9 +123,8 @@ ul {
 }
 
 .sub-header {
-  border-bottom: 1px solid #eee;
   background-color: #fafafa;
-  box-shadow: 1px 1px 1px #dfdfdf; 
+  box-shadow: 0.5px 0.5px 2px #b9b9b9; 
   text-align: center;
   box-sizing: border-box;
   margin: auto;
@@ -149,6 +148,41 @@ ul {
   margin: 4rem auto;
   padding: 14px;
   text-align: center;
+}
+
+.return-to-shelves {
+  display: block;
+  text-align: left;
+  background-color: #777;
+  margin: 8px;
+  width: 18px;
+  height: 3px;
+  text-shadow: 0.5px 0.5px 1px #999;
+}
+
+.return-to-shelves::before {
+  width: 12px;
+  right: 2px;
+  bottom: 3px;
+  background-color: #777;
+  height: 3px;
+  content: '';
+  transform: rotate(150deg);
+  position: relative;
+  display: block;
+  border-radius: 4px;
+}
+
+.return-to-shelves::after {
+  border-radius: 4px;
+  width: 12px;
+  right: 2px;
+  background-color: #777;
+  height: 3px;
+  content: '';
+  transform: rotate(30deg);
+  position: relative;
+  display: block;
 }
 
 li a {
@@ -178,4 +212,9 @@ li a:hover:after {
 
 .show-book-link {
   width: 100%;
+}
+
+.return-to-shelves:hover, .return-to-shelves:hover::before, .return-to-shelves:hover::after {
+  background-color: rgb(0, 94, 255);
+  cursor: pointer;
 }

@@ -1,5 +1,11 @@
 <div>
-  <h1 class="sub-header"><strong><%= @shelf_name.split('-').map { |s| s.capitalize }.join(' ') %></strong></h1>
+  <div class="sub-header">
+  <%= link_to shelves_path do %>
+    <span class="return-to-shelves">
+    </span>
+    <% end %>
+    <h1><strong><%= @shelf_name.split('-').map { |s| s.capitalize }.join(' ') %></strong></h1>
+  </div>
   <ul class="books-container">
     <% if @reading_list.blank? %>
         <h3 class="book-title book-author empty-shelf">This shelf is empty</h3>
