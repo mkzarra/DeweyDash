@@ -24,10 +24,10 @@ nav {
 
 header {
   background: rgb(0, 94, 255);
-  box-shadow: 0.5px 0.5px 6px #999;
-  height: 20vh;
+  box-shadow: 1px 1px 2px #999;
   background-position: top;
   margin: auto;
+  margin-bottom: 2px;
   width: 100%;
   padding: 18px 30px;
 }
@@ -40,12 +40,28 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 26px;
   justify-content: space-between;
 }
 
 .welcome-message {
   text-align: right;
   color: white;
+}
+
+.back {
+  border-top: 1px solid #eee;
+  font: small-caption;
+  margin: 3% 0 0;
+  padding: 3% 0;
+}
+
+.empty-shelf {
+  text-align: center;
+}
+
+.back span {
+margin: 8%;
 }
 
 .logo {
@@ -58,6 +74,115 @@ ul {
   flex-direction: row;
   justify-content: space-evenly;
   align-self: right;
+}
+
+.books-container {
+  margin: 1rem auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column
+}
+
+.books {
+  box-shadow: 0.5px 0.5px 2px #b9b9b988;
+  width: 80%;
+  height: 2em;
+  padding-bottom: 6px;
+  margin: 4px auto;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.books a {
+  width: 100%;
+  color: #777;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+.books a::before, .books a::after {
+  border: none;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+}
+
+.card-header span {
+  margin: auto;
+}
+
+.card-header img {
+  align-self: flex-end;
+}
+
+.sub-header {
+  background-color: #fafafa;
+  box-shadow: 0.5px 0.5px 2px #b9b9b9; 
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 14px;
+}
+
+.books:hover {
+  box-shadow: 1px 0.5px 3px #999;
+  background-color: #fafafa;
+  border: none;
+}
+
+.books a:hover, .books a:hover:before, .books a:hover:after {
+  border: none;
+}
+
+.book-card, .front {
+  box-shadow: 1px 2px 36px #ccc;
+  border: 1px solid #eee;
+  width: 60%;
+  margin: 4rem auto;
+  padding: 14px;
+  text-align: center;
+}
+
+.return-to-shelves {
+  display: block;
+  text-align: left;
+  background-color: #777;
+  margin: 8px;
+  width: 18px;
+  height: 3px;
+  text-shadow: 0.5px 0.5px 1px #999;
+}
+
+.return-to-shelves::before {
+  width: 12px;
+  right: 2px;
+  bottom: 3px;
+  background-color: #777;
+  height: 3px;
+  content: '';
+  transform: rotate(150deg);
+  position: relative;
+  display: block;
+  border-radius: 4px;
+}
+
+.return-to-shelves::after {
+  border-radius: 4px;
+  width: 12px;
+  right: 2px;
+  background-color: #777;
+  height: 3px;
+  content: '';
+  transform: rotate(30deg);
+  position: relative;
+  display: block;
 }
 
 li a {
@@ -83,4 +208,13 @@ li a:after, li a:before {
 li a:hover:after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.show-book-link {
+  width: 100%;
+}
+
+.return-to-shelves:hover, .return-to-shelves:hover::before, .return-to-shelves:hover::after {
+  background-color: rgb(0, 94, 255);
+  cursor: pointer;
 }

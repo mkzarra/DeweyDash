@@ -10,9 +10,12 @@
 <header>
 <div class="header-container">
   <h1 class="header-text logo">DeweyDash</h1>
-  <h5 class="header-text welcome-message">
-      Welcome, <%= @user_name %>!
-  </h5>
+  <% if @user %> 
+    <h5 class="header-text welcome-message">
+      Welcome, <%= @user['name'] %>! 
+    </h5>
+    <% else nil %>
+  <% end %> 
 </div>
 <nav>
   <%= render 'shared/nav' %>

@@ -1,0 +1,22 @@
+<div>
+  <div class="sub-header">
+  <%= link_to shelves_path do %>
+    <span class="return-to-shelves">
+    </span>
+    <% end %>
+    <h1><strong><%= @shelf_name.split('-').map { |s| s.capitalize }.join(' ') %></strong></h1>
+  </div>
+  <ul class="books-container">
+    <% if @reading_list.blank? %>
+        <h3 class="book-title book-author empty-shelf">This shelf is empty</h3>
+    <% else %>
+      <% @reading_list.each do |book| %>
+        <li class="books" id=<%= book['id'].to_s + "_" + book['title'].split(" ").join("_") %>>
+          <%= link_to book_path(book['id']) do %>
+            <span class='book-title book-author'><strong><%= book["title"] %></strong> by <%= book["authors"]["author"]["name"] %></span>
+          <% end %>
+        </li>
+        <% end %>     
+    <% end %>
+  </ul>
+</div>
