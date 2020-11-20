@@ -150,6 +150,11 @@ ul {
   text-align: center;
 }
 
+.return-container {
+	height: 10px;
+	width: 10px;
+}
+
 .return-to-shelves {
   display: block;
   text-align: left;
@@ -214,7 +219,9 @@ li a:hover:after {
   width: 100%;
 }
 
-.return-to-shelves:hover, .return-to-shelves:hover::before, .return-to-shelves:hover::after {
+.return-to-shelves:hover,
+.return-to-shelves:hover::before,
+.return-to-shelves:hover::after {
   background-color: rgb(0, 94, 255);
   cursor: pointer;
 }

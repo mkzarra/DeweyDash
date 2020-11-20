@@ -1,9 +1,11 @@
 <div>
   <div class="sub-header">
-  <%= link_to shelves_path do %>
-    <span class="return-to-shelves">
-    </span>
-    <% end %>
+  	<%= link_to shelves_path do %>
+			<div class="return-container">
+    		<span class="return-to-shelves">
+    		</span>
+			</div>
+  	<% end %>
     <h1><strong><%= @shelf_name.split('-').map { |s| s.capitalize }.join(' ') %></strong></h1>
   </div>
   <ul class="books-container">
